@@ -1,18 +1,30 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int NumberEntry = 0;
+    public static int numberEntry = 0;
+
     public static void main(String[] args) {
-       System.out.println("Добро пожаловать в программу печати числа в квадрате!");
-       System.out.println("Введите число: ");
+        System.out.println("Добро пожаловать в программа выдает true если число больше 5 и false если меньше или равно 5!");
+        System.out.println("Введите число: ");
         numberEntry();
-        NumberInAaSquare();
+        rightAndWrong();
     }
+
     public static void numberEntry() {
-        NumberEntry = new Scanner(System.in).nextInt();
+        numberEntry = new Scanner(System.in).nextInt();
     }
-    public static void NumberInAaSquare() {
-        System.out.println("Число в квадрате: " + NumberEntry * 2);
+
+    public static void rightAndWrong() {
+        if (numberEntry > 5) {
+            System.out.println(true);
+        }
+        if (numberEntry <= 5) {
+            System.out.println(false);
         }
     }
+}
+
+
+
+
 
