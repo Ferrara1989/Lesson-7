@@ -1,16 +1,19 @@
 import java.util.Scanner;
 
 public class Main {
-    public static String text = "";
+    public static int number = 0;
+    public static int a = 0;
     public static void main(String[] args) {
-        getText();
-        print();
+    a = getNumber();
+    results();
     }
-    public static void getText() {
-        System.out.println("Введите текст: ");
-        text = new Scanner(System.in).nextLine();
+    public static int getNumber() {
+    number = new Scanner(System.in).nextInt();
+    return number;
     }
-    public static void print() {
-        System.out.println("Ваш текст: " + text);
+    public static void results() {
+        if (a % 3 == 0) {
+            System.out.println("Не делится");
+        }
     }
 }
