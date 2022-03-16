@@ -1,24 +1,24 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int degreesСelsius = 0;
-    public static int degressFahrenheit = 0;
+    public static double degreesСelsius = 0;
+    public static double degressFahrenheit = 0;
     public static void main(String[] args) {
         System.out.println("Добро пожаловать в конвертер температуры!");
         print(getCelsus(), getFarengeit());
     }
-    public static int getCelsus() {
+    public static double getCelsus() {
         System.out.println("Ввод градусов по Цельсию: ");
-        degreesСelsius = new Scanner(System.in).nextInt();
+        degreesСelsius = new Scanner(System.in).nextDouble();
         return degreesСelsius;
     }
-    public static int getFarengeit() {
-        System.out.println(degreesСelsius + " Цельсий (а) это " +
-                (degreesСelsius * 1.8 + 32) + " Фарингейт ");
-        degressFahrenheit = new Scanner(System.in).nextInt();
+    public static double getFarengeit() {
+        degressFahrenheit = degreesСelsius * 1.8 + 32;
         return degressFahrenheit;
     }
-    public static void print(int getCelsus, int getFarengeit) {
+    public static void print(double getCelsus, double getFarengeit) {
+        System.out.println(getCelsus + " Цельсий (а) это " +
+                (degressFahrenheit) + " Фарингейт ");
         System.out.println("Температура по Цельсию: " + getCelsus);
         System.out.println("Температура по Фарингейту: " + getFarengeit);
     }
