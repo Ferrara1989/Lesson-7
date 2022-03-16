@@ -18,7 +18,7 @@ public class Main {
     }
     public static void print(double getCelsus, double getFarengeit) {
         System.out.println(getCelsus + " Цельсий (а) это " +
-                (degressFahrenheit) + " Фарингейт ");
+                (getFarengeit) + " Фарингейт ");
         System.out.println("Температура по Цельсию: " + getCelsus);
         System.out.println("Температура по Фарингейту: " + getFarengeit);
     }
