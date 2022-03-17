@@ -1,25 +1,29 @@
 import java.util.Scanner;
-
 public class Main {
-    public static double degreesСelsius = 0;
-    public static double degressFahrenheit = 0;
+    public static double Weight = 0;
+    public static double Height = 0;
+    public static double BMI = 0;
     public static void main(String[] args) {
-        System.out.println("Добро пожаловать в конвертер температуры!");
-        print(getCelsus(), getFarengeit());
+        System.out.println("Добро пожаловать в программу BMI!");
+        print(bodyMass(), growth(),humanBMI());
     }
-    public static double getCelsus() {
-        System.out.println("Ввод градусов по Цельсию: ");
-        degreesСelsius = new Scanner(System.in).nextDouble();
-        return degreesСelsius;
+    public static double bodyMass() {
+        System.out.println("Введите свою массу тела (кг): ");
+        Weight = new Scanner(System.in).nextDouble();
+        return Weight;
     }
-    public static double getFarengeit() {
-        degressFahrenheit = degreesСelsius * 1.8 + 32;
-        return degressFahrenheit;
+    public static double growth() {
+    System.out.println("Введите свой рост(см): ");
+    Height = new Scanner(System.in).nextDouble();
+    return Height;
     }
-    public static void print(double getCelsus, double getFarengeit) {
-        System.out.println(getCelsus + " Цельсий (а) это " +
-                (getFarengeit) + " Фарингейт ");
-        System.out.println("Температура по Цельсию: " + getCelsus);
-        System.out.println("Температура по Фарингейту: " + getFarengeit);
+    public static double humanBMI() {
+        BMI =  Weight/(Height * Height) * 10000;
+        return BMI;
+    }
+    public static void print(double bodyMass, double growth, double humanBMI) {
+        System.out.println("Ваш вес: " + bodyMass);
+        System.out.println("Ваш рост: " + growth);
+        System.out.println("Ваш BMI равен: " + humanBMI);
     }
 }
